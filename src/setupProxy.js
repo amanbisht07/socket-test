@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/api',
+    '/socket',
     createProxyMiddleware({
-      target: 'http://gateway-test.apps.ocp4.pacosta.com',
+      target: 'http://localhost:9090',
       changeOrigin: true,
     })
   );

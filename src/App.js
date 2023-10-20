@@ -13,6 +13,7 @@ function App() {
   }, [Socket]);
 
   const handleConnect = () => {
+    
     let Sock = new SockJS("/socket");
     let client = over(Sock);
     console.log(client);
